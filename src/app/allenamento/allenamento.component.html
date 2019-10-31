@@ -1,0 +1,123 @@
+<div style="text-align: center; margin-top: 15px;">
+    <div style="font-size: 40px; color: white; font-family: Arial, Helvetica, sans-serif;">
+        Allenamenti
+    </div>
+    <div class="ui-g">
+        <div class="ui-g-4 ui-g-offset-4">
+            <p-carousel [value]="allenamenti" numVisible="1" circular="true" responsive="true">
+                <ng-template pTemplate="item" let-allenamento>
+                    <div (click)="onRowSelect(allenamento)">
+                        <img src="assets\img\workout.png" height="100px">
+                        <div>
+                            <label>Settimana: </label>
+                            {{allenamento.settimana}}
+                        </div>
+                        <div>
+                            <label>Gruppo Muscolare: </label>
+                            {{allenamento.gruppo_muscolare}}
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+    </div>
+    <div style="text-align: right; margin-right: 12px; margin-top: 5px;">
+        <button pButton type="button" label="Crea Nuovo Allenamento" class="ui-button-raised"
+            (click)="creaAllenamento()" style='background-color: yellow; border: yellow; color: black;'></button>
+    </div>
+    <p-dialog header="{{title}}" [(visible)]="display" [style]="{width: '90%', height: '70%', 'position':'absolute'}"
+        [modal]="true">
+        <form [formGroup]="allenamento" (ngSubmit)="onAddAllenamento()">
+            <div class="ui-g-12" style="text-align: center;">
+                <div class="ui-g-6">
+                    <label for="nome">Gruppo Muscolare</label> <br>
+                    <input type="text" pInputText id="gruppo_muscolare" formControlName="gruppo_muscolare"
+                        (keyup)="filter()" label="Gruppo Muscolare" [(ngModel)]="gruppoMuscolare" />
+                </div>
+                <div class="ui-g-6">
+                    <label for="nome">Settimana</label> <br>
+                    <input type="number" pInputText id="settimana" formControlName="settimana" label="Settimana"
+                        [(ngModel)]="settimana" />
+                </div>
+            </div>
+            <div formArrayName="esercizi" *ngFor="let item of allenamento.get('esercizi').controls; let i = index;">
+                <div [formGroupName]="i">
+                    <div class="ui-g-12">
+                        <div class="ui-g-2 ui-g-offset-1">
+                            <label for="id">Esercizio</label> <br>
+                            <p-dropdown [options]="esercizifilt" placeholder="Inserisci l'esercizio"
+                                formControlName="id"></p-dropdown>
+                        </div>
+                        <div class="ui-g-2">
+                            <label for="ripetizioni">Ripetizioni</label> <br>
+                            <input type="number" pInputText id="ripetizioni" formControlName="ripetizioni"
+                                label="ripetizioni" />
+                        </div>
+                        <div class="ui-g-2">
+                            <label for="serie">Serie</label> <br>
+                            <input type="number" pInputText id="serie" formControlName="serie" label="serie" />
+                        </div>
+                        <div class="ui-g-2">
+                            <label for="riposo">Riposo</label> <br>
+                            <input type="number" pInputText id="riposo" formControlName="riposo" label="riposo" />
+                        </div>
+                        <div class="ui-g-2">
+                            <label for="peso">Peso (Kg)</label> <br>
+                            <input type="number" pInputText id="peso" formControlName="peso" label="peso" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 2px; text-align: right;">
+                <button pButton type="button" label="Aggiungi Esercizio" class="ui-button-raised"
+                    (click)="addEsercizio()" style="background-color: yellow; border: yellow; color: black;"></button>
+            </div>
+            <div style="margin-top: 10px; text-align: right;">
+                <button pButton type="submit" label="Aggiungi Allenamento" class="ui-button-raised"
+                    style='background-color: yellow; border: yellow; color: black;'></button>
+            </div>
+        </form>
+    </p-dialog>
+    <p-dialog header="Allenamento" [(visible)]="displayDialog"
+        [style]="{width: '90%', height: '70%', 'position':'absolute'}" [modal]="true">
+        <div class="ui-g-6">
+            <label>Settimana: </label>
+            {{selectedWorkout.settimana}}
+        </div>
+        <div class="ui-g-6">
+            <label>Gruppo Muscolare: </label>
+            {{selectedWorkout.gruppo_muscolare}}
+        </div>
+        <div class="ui-g-4 ui-g-offset-4">
+            <p-carousel [value]="selectedWorkout.esercizi" numVisible="1" circular="true" responsive="true" class="myClass">
+                <ng-template pTemplate="item" let-esercizio >
+                    <img src="assets\img\workout.png" height="100px">
+                    <div>
+                        <label>Esercizio: </label>
+                        {{esercizio.id}}
+                    </div>
+                    <div>
+                        <label>Peso: </label>
+                        {{esercizio.peso}} Kg
+                    </div>
+                    <div>
+                        <label>Ripetizioni: </label>
+                        {{esercizio.ripetizioni === 0? 'MAX': esercizio.ripetizioni}}
+                    </div>
+                    <div>
+                        <label>Serie: </label>
+                        {{esercizio.serie}}
+                    </div>
+                    <div>
+                        <label>Riposo: </label>
+                        {{esercizio.riposo}} sec
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <div style="text-align: right; margin-top: 5px;">
+                <button pButton type="button" label="Timer" class="ui-button-raised" (click)="timer()"
+             style="background-color: yellow; border: yellow; color: black;"></button>
+                </div>
+    </p-dialog>
+</div>

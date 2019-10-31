@@ -1,0 +1,64 @@
+<div style="margin-top: 20px;">
+<p-table [value]="exercises" [resizableColumns]="true" [frozenWidth]=200>
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="text-align: center;  width:55px;">Nome</th>
+            <th style="text-align: center;  width:60px;">Gruppo Muscolare</th>
+            <th style="text-align: center;  width:60px;">Tipologia</th>
+            <th colspan="2" style="text-align: center;  width:70px;">Opzioni</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-eser>
+        <tr>
+            <td style="text-align: center;width:55px;">{{eser.id}}</td>
+            <td style="text-align: center;width:60px;">{{eser.gruppo_muscolare}}</td>
+            <td style="text-align: center;width:60px;">{{eser.tipologia}}</td>
+            <td style="text-align: center; width:70px;">
+                <button pButton type="button" icon="fa fa-trash" (click)="delete(eser)"
+                    class="ui-button-raised ui-button-secondary"></button>
+            </td>
+            <td style="text-align: center;">
+                <button pButton type="button" icon="fa fa-edit" (click)="onModify(eser)"
+                    class="ui-button-raised ui-button-secondary"></button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<div style="text-align: right; margin-top: 5px;">
+    <button pButton type="button" label="Crea Esercizio" class="ui-button-raised" style='background-color: yellow; border: yellow; color:black;'
+        (click)="onCreate()"></button>
+</div>
+<p-dialog header="{{title}}" [(visible)]="show" [style]="{width: '90%', height: '70%'}" [modal]="true">
+    <form [formGroup]="esercizio" (ngSubmit)="onSubmit(esercizio.value)">
+        <div class="ui-g-12" style="text-align: center;">
+            <div class="ui-g-4">
+                <label for="id">Nome esercizio</label> <br>
+                <input type="text" pInputText id="id" label="Nome Esercizio" formControlName="id" [disabled]="true"
+                    [(ngModel)]="id" />
+            </div>
+            <div class="ui-g-4">
+                <label for="nome">Tipologia esercizio</label> <br>
+                <input type="text" pInputText id="tipologia" formControlName="tipologia" label="Tipologia Esercizio"
+                    [(ngModel)]="tipologia" />
+            </div>
+            <div class="ui-g-4">
+                <label for="nome">Gruppo muscolare</label> <br>
+                <input type="text" pInputText id="gruppo_muscolare" formControlName="gruppo_muscolare"
+                    label="Gruppo muscolare" [(ngModel)]="gruppo_muscolare" />
+            </div>
+        </div>
+        <p-footer>
+            <div style="text-align: right; margin-right: 20px;">
+                <span>
+                <button pButton type="button" label="Annulla"
+                    class="ui-button-raised ui-button-secondary" (click)="show=false"></button>
+                </span>
+                <span style="margin-left: 12px;">
+                <button pButton type="submit" label="Salva Esercizio"
+                    class="ui-button-raised" style='background-color: yellow; border: yellow; color:black;'></button>
+                </span>
+            </div>
+        </p-footer>
+    </form>
+</p-dialog>
+</div>

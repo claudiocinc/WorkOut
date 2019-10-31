@@ -1,0 +1,319 @@
+{
+  "esercizi": [
+    {
+      "id": "Ellittica",
+      "tipologia": "Cardio",
+      "label": "Ellittica",
+      "value": "Ellittica"
+    },
+    {
+      "id": "Leg Press",
+      "gruppo_muscolare": "Gambe",
+      "label": "Leg Press",
+      "value": "Leg Press"
+    },
+    {
+      "id": "Lento alto",
+      "gruppo_muscolare": "Spalle",
+      "label": "Lento alto",
+      "value": "Lento alto"
+    },
+    {
+      "id": "Leg Extension",
+      "gruppo_muscolare": "Gambe",
+      "label": "Leg Extension",
+      "value": "Leg Extension"
+    },
+    {
+      "id": "Panca Piana",
+      "tipologia": "",
+      "gruppo_muscolare": "Petto",
+      "label": "Panca Piana",
+      "value": "Panca Piana"
+    },
+    {
+      "id": "Croci ai cavi",
+      "tipologia": "",
+      "gruppo_muscolare": "Petto",
+      "label": "Croci ai cavi",
+      "value": "Croci ai cavi"
+    },
+    {
+      "id": "Tirate Inverse",
+      "tipologia": "",
+      "gruppo_muscolare": "Dorso",
+      "label": "Tirate Inverse",
+      "value": "Tirate Inverse"
+    },
+    {
+      "id": "Low Row Stretta",
+      "tipologia": "",
+      "gruppo_muscolare": "Dorso",
+      "label": "Low Row Stretta",
+      "value": "Low Row Stretta"
+    },
+    {
+      "id": "Panca Stretta",
+      "tipologia": "",
+      "gruppo_muscolare": "Tricipiti",
+      "label": "Panca Stretta",
+      "value": "Panca Stretta"
+    },
+    {
+      "id": "Curl Bilanciere",
+      "tipologia": "",
+      "gruppo_muscolare": "Bicipiti",
+      "label": "Curl Bilanciere",
+      "value": "Curl Bilanciere"
+    }
+  ],
+  "allenamenti": [
+    {
+      "settimana": 1,
+      "gruppo_muscolare": "Gambe/Petto",
+      "esercizi": [
+        {
+          "id": "Leg Press",
+          "ripetizioni": 0,
+          "serie": 6,
+          "riposo": 3,
+          "peso": 378,
+          "ordine": 1
+        },
+        {
+          "id": "Panca Piana",
+          "ripetizioni": 0,
+          "serie": 6,
+          "riposo": 3,
+          "peso": 81,
+          "ordine": 2
+        }
+      ],
+      "id": 1
+    },
+    {
+      "settimana": 2,
+      "gruppo_muscolare": "Gambe/Petto",
+      "esercizi": [
+        {
+          "id": "Leg Press",
+          "ripetizioni": 0,
+          "serie": 5,
+          "riposo": 3,
+          "peso": 378,
+          "ordine": 1
+        },
+        {
+          "id": "Panca Piana",
+          "ripetizioni": 0,
+          "serie": 5,
+          "riposo": 3,
+          "peso": 81,
+          "ordine": 2
+        }
+      ],
+      "id": 2
+    },
+    {
+      "settimana": 3,
+      "gruppo_muscolare": "Gambe/Petto",
+      "esercizi": [
+        {
+          "id": "Leg Press",
+          "ripetizioni": 0,
+          "serie": 4,
+          "riposo": 3,
+          "peso": 378,
+          "ordine": 1
+        },
+        {
+          "id": "Panca Piana",
+          "ripetizioni": 0,
+          "serie": 4,
+          "riposo": 3,
+          "peso": 81,
+          "ordine": 2
+        }
+      ],
+      "id": 3
+    },
+    {
+      "settimana": 1,
+      "gruppo_muscolare": "Dorso/Bicipiti",
+      "esercizi": [
+        {
+          "id": "Tirate Inverse",
+          "ripetizioni": 0,
+          "serie": 6,
+          "riposo": 3,
+          "peso": 86.4,
+          "ordine": 1
+        },
+        {
+          "id": "Low Row Stretta",
+          "ripetizioni": 0,
+          "serie": 5,
+          "riposo": 3,
+          "peso": 90,
+          "ordine": 2
+        },
+        {
+          "id": "Curl Bilanciere",
+          "ripetizioni": 0,
+          "serie": 5,
+          "riposo": 0,
+          "peso": 85,
+          "ordine": 3
+        }
+      ],
+      "id": 4
+    },
+    {
+      "settimana": 2,
+      "gruppo_muscolare": "Dorso/Bicipiti",
+      "esercizi": [
+        {
+          "id": "Tirate Inverse",
+          "ripetizioni": 0,
+          "serie": 5,
+          "riposo": 3,
+          "peso": 86.4,
+          "ordine": 1
+        },
+        {
+          "id": "Low Row Stretta",
+          "ripetizioni": 0,
+          "serie": 4,
+          "riposo": 3,
+          "peso": 90,
+          "ordine": 2
+        },
+        {
+          "id": "Curl Bilanciere",
+          "ripetizioni": 0,
+          "serie": 4,
+          "riposo": 0,
+          "peso": 85,
+          "ordine": 3
+        }
+      ],
+      "id": 5
+    },
+    {
+      "settimana": 3,
+      "gruppo_muscolare": "Dorso/Bicipiti",
+      "esercizi": [
+        {
+          "id": "Tirate Inverse",
+          "ripetizioni": 0,
+          "serie": 2,
+          "riposo": 3,
+          "peso": 86.4,
+          "ordine": 1
+        },
+        {
+          "id": "Low Row Stretta",
+          "ripetizioni": 0,
+          "serie": 2,
+          "riposo": 3,
+          "peso": 90,
+          "ordine": 2
+        },
+        {
+          "id": "Curl Bilanciere",
+          "ripetizioni": 0,
+          "serie": 2,
+          "riposo": 0,
+          "peso": 85,
+          "ordine": 3
+        }
+      ],
+      "id": 6
+    },
+    {
+      "settimana": 1,
+      "gruppo_muscolare": "Spalle/Tricipiti",
+      "esercizi": [
+        {
+          "id": "Lento alto",
+          "ripetizioni": 0,
+          "serie": 6,
+          "riposo": 3,
+          "peso": 25,
+          "ordine": 1
+        },
+        {
+          "id": "Panca Stretta",
+          "ripetizioni": 0,
+          "serie": 6,
+          "riposo": 3,
+          "peso": 65,
+          "ordine": 2
+        }
+      ],
+      "id": 7
+    },
+    {
+      "settimana": 2,
+      "gruppo_muscolare": "Spalle/Tricipiti",
+      "esercizi": [
+        {
+          "id": "Lento alto",
+          "ripetizioni": 0,
+          "serie": 5,
+          "riposo": 3,
+          "peso": 25,
+          "ordine": 1
+        },
+        {
+          "id": "Panca Stretta",
+          "ripetizioni": 0,
+          "serie": 5,
+          "riposo": 3,
+          "peso": 65,
+          "ordine": 2
+        }
+      ],
+      "id": 9
+    },
+    {
+      "settimana": 3,
+      "gruppo_muscolare": "Spalle/Tricipiti",
+      "esercizi": [
+        {
+          "id": "Lento alto",
+          "ripetizioni": 0,
+          "serie": 2,
+          "riposo": 3,
+          "peso": 25,
+          "ordine": 1
+        },
+        {
+          "id": "Panca Stretta",
+          "ripetizioni": 0,
+          "serie": 2,
+          "riposo": 3,
+          "peso": 65,
+          "ordine": 2
+        }
+      ],
+      "id": 10
+    },
+    {
+      "settimana": 4,
+      "gruppo_muscolare": "Spalle",
+      "esercizi": [
+        {
+          "id": "Lento alto",
+          "ripetizioni": 1,
+          "serie": 1,
+          "riposo": 1,
+          "peso": null,
+          "ordine": 1
+        }
+      ],
+      "id": 11
+    }
+  ],
+  "workout": []
+}

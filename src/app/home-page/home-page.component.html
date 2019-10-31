@@ -1,0 +1,16 @@
+<div style="text-align: center; margin-top: 15px;">
+    <div style="font-size: 40px;">
+       Allenamenti
+    </div>
+    <div style="text-align: right; margin-right: 12px;">
+        <button pButton type="button" label="Crea Nuovo Allenamento" class="ui-button-raised" (click)="display=true" style='background-color: yellow; border: yellow; color: black;'></button>
+    </div>
+    <p-dialog header="Creazione Allenamento" [(visible)]="display">
+        <form>
+            <div class="form-group">
+                <label for="gruppo_muscolare"></label>
+
+            </div>
+        </form>
+    </p-dialog>
+</div>
